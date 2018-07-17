@@ -11,6 +11,12 @@
 |
 */
 
+//Route Home
 Route::get('/', function () {
     return view('welcome');
+});
+
+// Route Admin
+Route::group(['prefix' => 'admin','namespace' => 'Admin'],function(){
+	Route::get('/','AdminController@testToastr');
 });
